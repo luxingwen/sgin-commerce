@@ -20,7 +20,6 @@ export async function generateMetadata({
 
   if (!product) return notFound();
 
-  console.log("product:", product);
 
   const { url } = product.featuredImage || {};
  // const indexable = !product.tags.includes(HIDDEN_PRODUCT_TAG);
@@ -111,7 +110,8 @@ async function RelatedProducts({ id }: { id: string }) {
               <GridTileImage
                 alt={product.name}
                 label={{
-                  title: product.name,    
+                  title: product.name,
+                  amount: product.price,    
                 }}
                 src={product.featuredImage?.url}
                 fill

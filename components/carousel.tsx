@@ -11,8 +11,6 @@ export async function Carousel() {
   // Purposefully duplicating products to make the carousel loop and not run out of products on wide screens.
   const carouselProducts = [...products, ...products, ...products];
 
-  console.log("carouselProducts:", carouselProducts);
-
   return (
     <div className="w-full overflow-x-auto pb-6 pt-1">
       <ul className="flex animate-carousel gap-4">
@@ -26,7 +24,7 @@ export async function Carousel() {
                 alt={product.name}
                 label={{
                   title: product.name,
-                //  amount: product.priceRange.maxVariantPrice.amount,
+                  amount: product.price,
                  // currencyCode: product.priceRange.maxVariantPrice.currencyCode
                 }}
                 src={product.featuredImage?.url}

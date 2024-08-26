@@ -222,7 +222,6 @@ export async function getCollectionProducts({
     return [];
   }
 
-  console.log("response:", response);
 
   return reshapeProducts(response.data.data);
 }
@@ -335,8 +334,6 @@ export async function getProducts({
     reverse,
     sortKey
   });
-
-  console.log("response:", response);
 
   return   reshapeProducts(response.data.data);
 }
